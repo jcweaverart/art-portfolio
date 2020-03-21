@@ -1,0 +1,3 @@
+newFunction() {
+return null
+}
