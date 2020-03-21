@@ -1,3 +1,0 @@
-newFunction() {
-return null
-}
