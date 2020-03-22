@@ -1,14 +1,15 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
+import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import { StyledAppWrapper } from './containers/styled-app-wrapper'
 import { GlobalFooter } from './global-footer/global-footer'
 import { GlobalNavigation } from './global-navigation/global-navigation'
 import { SplashSection } from './landing-page/splash-section'
-class App extends React.Component {
-  render() {
-    return (
+const App = ({ store }) => {
+  return (
+    <Provider store={store}>
       <BrowserRouter>
         <StyledAppWrapper>
           <GlobalNavigation />
@@ -29,8 +30,8 @@ class App extends React.Component {
           <GlobalFooter />
         </StyledAppWrapper>
       </BrowserRouter>
-    )
-  }
+    </Provider>
+  )
 }
 
 export default hot(module)(App)
