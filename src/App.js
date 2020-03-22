@@ -1,12 +1,16 @@
 import React from 'react'
-import '../public/style.css'
-
+import { StyledAppWrapper } from './containers/styled-app-wrapper'
+import { GlobalFooter } from './global-footer/global-footer'
+import { GlobalNavigation } from './global-navigation/global-navigation'
+import { SplashSection } from './landing-page/splash-section'
 export class App extends React.Component {
   render() {
     return (
-      <div className='pageTitleClass'>
-        Welcome to the home page of JCWeaverart
-      </div>
+      <StyledAppWrapper>
+        <GlobalNavigation />
+        <SplashSection />
+        <GlobalFooter />
+      </StyledAppWrapper>
     )
   }
 }
