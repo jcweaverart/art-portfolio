@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
-echo "-- running npm ci to install all dependencies"
+echo "-- remove the package-lock file"
+rm -f package-lock.json
+
+echo "-- clearing the dir directory"
+npm run build-clean
+
+echo "-- removing the node_modules"
+npm run dependency_clean
+
+echo "-- running npm install to install all dependencies"
 npm install
 
 echo "-- running a dedupe on the dependency tree"

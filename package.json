@@ -7,6 +7,7 @@
     "build": "npx webpack --config webpack.config.js ",
     "build-clean": "rm -rf ./dist",
     "build-pipeline": "./build.sh",
+    "dependency_clean": "rm -rf ./node_modules",
     "start-dev": "webpack-dev-server --mode development"
   },
   "repository": {
