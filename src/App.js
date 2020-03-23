@@ -7,6 +7,7 @@ import { StyledAppWrapper } from './containers/styled-app-wrapper'
 import { GlobalFooter } from './global-footer/global-footer'
 import { GlobalNavigation } from './global-navigation/global-navigation'
 import { SplashSection } from './landing-page/splash-section'
+
 const App = ({ store }) => {
   return (
     <Provider store={store}>

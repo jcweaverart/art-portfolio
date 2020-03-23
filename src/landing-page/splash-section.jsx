@@ -1,11 +1,16 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+
 import { StyledSectionWrapper } from '../containers/styled-section-wrapper'
 
 export const SplashSection = props => {
+  const title = useSelector(state => state.baseReducer.title)
+  const bodyText = useSelector(state => state.baseReducer.bodyText)
+
   return (
     <StyledSectionWrapper>
-      <header>This is the splash section header</header>
-      <div>This is the splash section content</div>
+      <header> {title} </header>
+      <div> {bodyText} </div>
     </StyledSectionWrapper>
   )
 }
