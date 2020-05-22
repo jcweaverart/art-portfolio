@@ -5,7 +5,7 @@ export default function baseReducer(state = [], action) {
     case SET_TITLE:
       return {
         ...state,
-        title: action.payload.title
+        title: action.title
       }
     default:
       return state
