@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import { StyledAppWrapper } from './containers/styled-app-wrapper'
 import { GlobalFooter } from './global-footer/global-footer'
+import { GlobalHeader } from './global-header/global-header'
 import { GlobalNavigation } from './global-navigation/global-navigation'
 import { SplashSection } from './landing-page/splash-section'
 
@@ -13,6 +14,7 @@ const App = ({ store }) => {
     <Provider store={store}>
       <BrowserRouter>
         <StyledAppWrapper>
+          <GlobalHeader />
           <GlobalNavigation />
           <Switch>
             <Route path='/contact'>

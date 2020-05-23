@@ -4,25 +4,19 @@ import { css } from '@emotion/core'
 import { NavLink } from 'react-router-dom'
 import { StyledNavigationWrapper } from '../containers/styled-navigation-wrapper'
 
-const activeClassName = ''
+const GlobalNavLink = (props) => {
+  return <NavLink to={props.path}>{props.children}</NavLink>
+}
 
 export const GlobalNavigation = () => {
-  const links = useSelector(state => state.navigationReducer.links)
+  const links = useSelector((state) => state.navigationReducer.links)
 
   return (
     <StyledNavigationWrapper>
-      <NavLink activeClassName={activeClassName} to='/'>
-        {links.home}
-      </NavLink>
-      <NavLink activeClassName={activeClassName} to='/work'>
-        {links.work}
-      </NavLink>
-      <NavLink activeClassName={activeClassName} to='/about'>
-        {links.about}
-      </NavLink>
-      <NavLink activeClassName={activeClassName} to='/contact'>
-        {links.contact}
-      </NavLink>
+      <GlobalNavLink children={links.home} path='/' />
+      <GlobalNavLink children={links.work} path='/work' />
+      <GlobalNavLink children={links.about} path='/about' />
+      <GlobalNavLink children={links.contact} path='/contact' />
     </StyledNavigationWrapper>
   )
 }

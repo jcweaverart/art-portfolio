@@ -1,26 +1,47 @@
+import styled from '@emotion/styled'
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { setTitle } from '../store/actions/base-actions'
+import { useSelector } from 'react-redux'
 import { StyledSectionWrapper } from '../containers/styled-section-wrapper'
 
-export const SplashSection = props => {
-  const title = useSelector(state => state.baseReducer.title)
-  const bodyText = useSelector(state => state.baseReducer.bodyText)
+export const SplashGalleryGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: minmax(250px, auto);
+  grid-gap: 8px;
+  margin: auto;
+  max-width: 1100px;
+`
 
-  const dispatch = useDispatch()
+export const SplashGalleryGridCell = styled.div`
+  background-color: #f5c531;
+`
 
+export const SplashSection = (props) => {
+  // const bodyContent = useSelector((state) => state.baseReducer.bodyText)
   return (
     <StyledSectionWrapper>
-      <header> {title} </header>
-      <button
-        onClick={() => {
-          // console.log(useSelector(state => state.baseReducer.title))
-          dispatch(setTitle('random text'))
-        }}
-      >
-        Click
-      </button>
-      <div> {bodyText} </div>
+      <SplashGalleryGrid>
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+        <SplashGalleryGridCell />
+      </SplashGalleryGrid>
     </StyledSectionWrapper>
   )
 }

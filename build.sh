@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-echo "-- remove the package-lock file"
-rm -f package-lock.json
-
 echo "-- clearing the dir directory"
 npm run build-clean
 
