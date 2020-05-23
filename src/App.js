@@ -7,7 +7,10 @@ import { StyledAppWrapper } from './containers/styled-app-wrapper'
 import { GlobalFooter } from './global-footer/global-footer'
 import { GlobalHeader } from './global-header/global-header'
 import { GlobalNavigation } from './global-navigation/global-navigation'
-import { SplashPage } from './pages/home-page'
+import { HomePage } from './pages/home-page'
+import { AboutMePage } from './pages/about-me-page'
+import { ContactMePage } from './pages/contact-me-page'
+import { MyWorkPage } from './pages/my-work-page'
 
 const App = ({ store }) => {
   return (
@@ -18,16 +21,16 @@ const App = ({ store }) => {
           <GlobalNavigation />
           <Switch>
             <Route path='/contact'>
-              <div> Contact Me </div>
+              <ContactMePage />
             </Route>
             <Route path='/about'>
-              <div> About Me </div>
+              <AboutMePage />
             </Route>
             <Route path='/work'>
-              <div> My Work </div>
+              <MyWorkPage />
             </Route>
             <Route path='/'>
-              <SplashPage />
+              <HomePage />
             </Route>
           </Switch>
           <GlobalFooter />

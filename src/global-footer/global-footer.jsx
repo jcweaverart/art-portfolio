@@ -29,7 +29,7 @@ const FooterGridCell = styled.div`
 
 const IconLink = (props) => {
   return (
-    <a href={props.href || ''} target='_blank'>
+    <a href={props.link} target={props.link && '_blank'}>
       <img src={props.source} alt={props.altText} height={32} width={32} />
     </a>
   )
@@ -49,19 +49,71 @@ export const GlobalFooter = () => {
               flexWrap: 'wrap',
             }}
           >
-            <IconLink source={TumblrIcon} altText='Tumblr Icon' />
-            <IconLink source={DribbbleIcon} altText='Dribbble Icon' />
-            <IconLink source={TwitchIcon} altText='Twitch Icon' />
-            <IconLink source={YoutubeIcon} altText='Youtube Icon' />
-            <IconLink source={FacebookIcon} altText='Facebook Icon' />
-            <IconLink source={InstagramIcon} altText='Instagram Icon' />
-            <IconLink source={SnapchatIcon} altText='Snapchat Icon' />
-            <IconLink source={GithubIcon} altText='Github Icon' />
-            <IconLink source={DeviantArtIcon} altText='Deviantart Icon' />
-            <IconLink source={PinterestIcon} altText='Pinterest Icon' />
-            <IconLink source={TwitterIcon} altText='Twitter Icon' />
-            <IconLink source={LinkedinIcon} altText='Linkedin Icon' />
-            <IconLink source={BehanceIcon} altText='Behance Icon' />
+            <IconLink
+              source={TumblrIcon}
+              altText='Tumblr Icon'
+              link='https://www.tumblr.com/blog/jcweaverart'
+            />
+            <IconLink
+              source={DribbbleIcon}
+              altText='Dribbble Icon'
+              link='https://dribbble.com/jcweaverart'
+            />
+            <IconLink
+              source={TwitchIcon}
+              altText='Twitch Icon'
+              link='https://www.twitch.tv/jcweaverart'
+            />
+            <IconLink
+              source={YoutubeIcon}
+              altText='Youtube Icon'
+              link='https://www.youtube.com/channel/UCziNshD--losK1FwSqqeo0w?view_as=subscriber'
+            />
+            <IconLink
+              source={FacebookIcon}
+              altText='Facebook Icon'
+              link='https://www.facebook.com/jcweaverart/'
+            />
+            <IconLink
+              source={InstagramIcon}
+              altText='Instagram Icon'
+              link='https://www.instagram.com/jcweaverart/'
+            />
+            <IconLink
+              source={SnapchatIcon}
+              altText='Snapchat Icon'
+              link='https://www.snapchat.com/'
+            />
+            <IconLink
+              source={GithubIcon}
+              altText='Github Icon'
+              link='https://github.com/jcweaverart'
+            />
+            <IconLink
+              source={DeviantArtIcon}
+              altText='Deviantart Icon'
+              link='https://www.deviantart.com/jcweaverart'
+            />
+            <IconLink
+              source={PinterestIcon}
+              altText='Pinterest Icon'
+              link='https://www.pinterest.com/jcweaverart/'
+            />
+            <IconLink
+              source={TwitterIcon}
+              altText='Twitter Icon'
+              link='https://twitter.com/jcweaverart'
+            />
+            <IconLink
+              source={LinkedinIcon}
+              altText='Linkedin Icon'
+              link='https://www.linkedin.com/in/weaverjordan/'
+            />
+            <IconLink
+              source={BehanceIcon}
+              altText='Behance Icon'
+              link='https://www.behance.net/jcweaverart'
+            />
           </FooterGridCell>
           <FooterGridCell />
         </FooterGridContainer>
