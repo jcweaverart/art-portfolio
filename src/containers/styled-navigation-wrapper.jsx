@@ -8,16 +8,4 @@ export const StyledNavigationWrapper = styled.nav`
   grid-row: 2/3;
   position: relative;
   text-align: center;
-
-  a {
-    color: black;
-    padding: 0 12px;
-    text-decoration: none;
-
-    &:active,
-    &:focus,
-    &:hover {
-      color: #55d4eb;
-    }
-  }
 `

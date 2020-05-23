@@ -7,7 +7,7 @@ import { StyledAppWrapper } from './containers/styled-app-wrapper'
 import { GlobalFooter } from './global-footer/global-footer'
 import { GlobalHeader } from './global-header/global-header'
 import { GlobalNavigation } from './global-navigation/global-navigation'
-import { SplashSection } from './landing-page/splash-section'
+import { SplashPage } from './pages/home-page'
 
 const App = ({ store }) => {
   return (
@@ -27,7 +27,7 @@ const App = ({ store }) => {
               <div> My Work </div>
             </Route>
             <Route path='/'>
-              <SplashSection />
+              <SplashPage />
             </Route>
           </Switch>
           <GlobalFooter />

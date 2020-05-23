@@ -6,7 +6,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'public/'),
     port: 3000,
     publicPath: 'http://localhost:3000/dist/',
-    hotOnly: true
+    hotOnly: true,
   },
   entry: './src/index.js',
   mode: 'development',
@@ -14,24 +14,31 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules)/,
         loader: 'babel-loader',
-        options: { presets: ['@babel/env'] }
+        options: { presets: ['@babel/env'] },
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: ['file-loader']
-      }
-    ]
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'img/[hash]-[name].[ext]',
+            },
+          },
+        ],
+      },
+    ],
   },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/'
+    publicPath: '/dist/',
   },
-  resolve: { extensions: ['*', '.js', '.jsx'] }
+  resolve: { extensions: ['*', '.js', '.jsx'] },
 }

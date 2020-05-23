@@ -8,4 +8,16 @@ export const StyledAppWrapper = styled.main`
   font-family: Arial, sans-serif;
   margin: 0px 24px;
   position: relative;
+
+  a {
+    color: black;
+    padding: 0 12px;
+    text-decoration: none;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: #55d4eb;
+    }
+  }
 `
